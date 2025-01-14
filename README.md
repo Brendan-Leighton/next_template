@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+<!-- 
+	MARKDOWN LINKS & IMAGES
+-->
+[varcel_deployment]: https://vercel.com/brendans-projects-b7be8ea1/portfolio/AHaEm1VqFhDH4mdmAn5mEtXSAuAg
+[live_app]: https://portfolio-cx5lfirv7-brendans-projects-b7be8ea1.vercel.app/
+[git_workflow]: ./docs/GIT_WORKFLOW.md
 
-First, run the development server:
+<!-- 
+	PROJECT TITLE
+	A name that explains the subject
+-->
+<div align='center'>
+    
+# Next Template
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*[Production Link Goes Here][live_app]*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<!-- 
+	ABOUT THE PROJECT
+	
+	1. What does the project do specifically?
+	2. Provide context and add links to explainer content a newb would find helpful.
+	3. Subsection; A list of features
+-->
+## About the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Template project using Next.js. Initialized documentation and more to get up and running with a project quicker. 
 
-## Learn More
+### Built With
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org/learn)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind Color Generator](https://uicolors.app/create)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- Optional "Built With" technologies - uncomment or delete -->
+<!-- 
+- [React Typescript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
+- [Lucide Icons](https://lucide.dev/icons/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Shadcn Theming](https://ui.shadcn.com/docs/theming) 
+-->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Roadmap
 
-## Deploy on Vercel
+List of stuff to do or features to add
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Update dependencies `pnpm up --latest`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+I'm not interested in adding new dependencies but will consider fixes and improvements!
+
+Guidlines - Follow the [Git Workflow][git_workflow] documentation.
+
+## Contact
+
+Feel free to contact me with questions related to this project!
+
+| Name             | Role       | Contact Options                                                                                                                                                                               |
+| ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Brendan Leighton | Repo Owner | [Email](br3ndan.l8n@gmail.com), [GitHub](https://github.com/Brendan-Leighton), [LinkedIn](https://www.linkedin.com/in/brendan-leighton/), [Bsky](https://bsky.app/profile/brenzy.bsky.social) |
+
+## Acknowledgements
+
+Hi mom!
