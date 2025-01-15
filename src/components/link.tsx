@@ -14,11 +14,12 @@ export function Link({ href, aria_label, className, children }: { href: string, 
 			href={href}
 			aria-label={aria_label}
 			className={`
-				${className}
 				underline underline-offset-4 
 				text-primary-600 
 				hover:text-accent-600 hover:no-underline
+				${className}
 			`}
+			target='_blank'
 		>{children}</a>
 	)
 }
