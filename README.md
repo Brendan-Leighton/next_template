@@ -5,6 +5,7 @@
 [varcel_deployment]: https://vercel.com/brendans-projects-b7be8ea1/portfolio/AHaEm1VqFhDH4mdmAn5mEtXSAuAg
 [live_app]: https://portfolio-cx5lfirv7-brendans-projects-b7be8ea1.vercel.app/
 [git_workflow]: ./docs/GIT_WORKFLOW.md
+[use_template_button]: ./docs/assets/use-this-template-button.webp
 
 <!-- 
 	PROJECT TITLE
@@ -28,6 +29,17 @@
 ## About the Project
 
 Template project using Next.js. Initialized documentation and more to get up and running with a project quicker. 
+
+### Usage
+
+1. On GitHub, navigate to the main page of the repository.
+
+2. Above the file list, click Use this template.
+![use_template_button]
+Screenshot of the "Use this template" button and the dropdown menu expanded to show the "Open in a codespace" option.
+
+3. Select Create a new repository.
+
 
 ### Built With
 
