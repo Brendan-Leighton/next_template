@@ -59,7 +59,23 @@ Screenshot of the "Use this template" button and the dropdown menu expanded to s
 
 List of stuff to do or features to add
 
-- [ ] Update dependencies `pnpm up --latest`
+- [ ] remove next.js boiler svg's in public/
+- [ ] Components
+  - [ ] Open Graph Image
+  - [ ] useLocalStorage hook
+  - [ ] useIntersectionObserver (borrow from weather app?)
+  - [ ] shadcn setup
+- [ ] Configs
+  - [ ] ESLint
+  - [ ] Prettier
+  - [ ] Typescript
+  - [ ] Tailwind
+  - [ ] VS Code
+- [ ] Dependencies
+  - [ ] react-icons
+
+More Ideas:
+- https://vercel.com/templates/next.js
 
 ## Contributing
 
