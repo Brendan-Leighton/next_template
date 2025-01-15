@@ -3,3 +3,4 @@
  */
 export * from './link'
 export * from './code'
+export * from './contact-icons'
