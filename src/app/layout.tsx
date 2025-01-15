@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "Next.js Template",
-	description: "Template for Next.js projects",
+	description: "A project template using Next.js, TypeScript, TailwindCSS, Shadcn UI, and more!",
 	applicationName: 'Next.js Template',
 	authors: [{ name: 'Brendan Leighton', url: 'https://github.com/Brendan-Leighton' }],
 	creator: 'Brendan Leighton',
