@@ -8,11 +8,11 @@ import React from 'react'
  * @param props.children name of the link and optional icon or other content
  * @returns 
  */
-export function Link({ href, aria_label, className, children }: { href: string, aria_label: string, className?: string, children: React.ReactNode }) {
+export function Link({ href, ariaLabel, className, title, children }: { href: string, ariaLabel: string, className?: string, title?: string, children: React.ReactNode }) {
 	return (
 		<a
 			href={href}
-			aria-label={aria_label}
+			aria-label={ariaLabel}
 			className={`
 				underline underline-offset-4 
 				text-primary-600 
@@ -20,6 +20,7 @@ export function Link({ href, aria_label, className, children }: { href: string, 
 				${className}
 			`}
 			target='_blank'
+			title={title}
 		>{children}</a>
 	)
 }
