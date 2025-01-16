@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGithub, FaBluesky, FaLinkedinIn } from 'react-icons/fa6'
-import { Link } from './link'
+import { Button } from './shadcn/button'
 
 export function ContactIcons({ className }: { className?: string }) {
 
@@ -25,23 +25,27 @@ export function ContactIcons({ className }: { className?: string }) {
 	return (
 		<ul
 			className={`
-				${className} + 
-				 flex justify-center gap-4 w-fit p-2 rounded transition-all 3000s
-				 shadow-md
-				 dark:shadow-none 
-				 bg-primary-700 dark:bg-primary-600
+				${className}
+				 flex justify-center gap-4 w-fit
 			`}
 		>
 			{
 				icons.map(({ icon, link, title }) => (
 					<li key={title} title={title}>
-						<Link
-							href={link}
-							ariaLabel={title}
-							className="text-white text-4xl"
+						<Button
+							asChild
+							variant='link'
+							size='link'
 						>
-							{icon}
-						</Link>
+							<a
+								href={link}
+								aria-label={title}
+								className='text-3xl'
+								title={title}
+							>
+								{icon}
+							</a>
+						</Button>
 					</li>
 				))
 			}
