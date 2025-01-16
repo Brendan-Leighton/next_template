@@ -16,10 +16,27 @@ export default function Home() {
 				<a
 					href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
 					aria-label="Vercel"
+					target="_blank"
 				>Vercel</a>
 			</Button>
 		)
 	}
+
+	const GithubNextTemplateLink = () => {
+		return (
+			<Button asChild
+				variant="link"
+				size='link'
+			>
+				<a
+					href="https://github.com/Brendan-Leighton/next_template"
+					aria-label="Github"
+					target="_blank"
+				>Github</a>
+			</Button>
+		)
+	}
+
 	return (
 		<div className="flex flex-col justify-center items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 			<header>
@@ -51,10 +68,10 @@ export default function Home() {
 				"
 			>
 
-				<h2 className="text-3xl">To Do:</h2>
+				<h2 className="text-3xl">Get Started:</h2>
 
 				<ol className="list-decimal list-inside flex flex-col gap-4 w-fit">
-					<li>Use Template: https://github.com/Brendan-Leighton/next_template</li>
+					<li>Use Template on {GithubNextTemplateLink()}</li>
 					<li>
 						Update dependencies:
 						<ul className="list-circle pl-8 pt-2">
@@ -68,6 +85,7 @@ export default function Home() {
 					</li>
 					<li>Deploy on {VercelDeployLink()}</li>
 					<li>Modify docs or remove features</li>
+					<li>Begin Coding</li>
 				</ol>
 
 			</main>
