@@ -3,7 +3,7 @@
 	MARKDOWN LINKS & IMAGES
 -->
 [varcel_deployment]: https://vercel.com/brendans-projects-b7be8ea1/portfolio/AHaEm1VqFhDH4mdmAn5mEtXSAuAg
-[live_app]: https://portfolio-cx5lfirv7-brendans-projects-b7be8ea1.vercel.app/
+[live_app]: https://next-template-bl.vercel.app/
 [git_workflow]: ./docs/GIT_WORKFLOW.md
 [use_template_button]: ./docs/assets/use-this-template-button.webp
 
@@ -15,7 +15,7 @@
     
 # Next Template
 
-*[Production Link Goes Here][live_app]*
+*[Production Link][live_app]*
 
 </div>
 
