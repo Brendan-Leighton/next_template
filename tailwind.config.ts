@@ -29,20 +29,6 @@ const golden_dream = {
 	'950': '#3f2009',
 }
 
-const electric_violet = {
-	'50': '#fcf3ff',
-	'100': '#f7e2ff',
-	'200': '#f1cbff',
-	'300': '#e6a2ff',
-	'400': '#d767ff',
-	'500': '#c92dff',
-	'600': '#bb06ff',
-	'700': '#a700f8',
-	'800': '#9400d3',
-	'900': '#7302a1',
-	'950': '#51007b',
-}
-
 export default {
 	content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",

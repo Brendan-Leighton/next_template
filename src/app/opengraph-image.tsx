@@ -17,7 +17,6 @@ export const contentType = 'image/png'
 */
 export default async function Image() {
 	// colors to use in image - swap or add if you like
-	const color_purple = '#bb06ff'
 	const color_accent = '#c1870d'
 	const color_primary = '#00b3e3'
 	const color_black = '#09090b'
