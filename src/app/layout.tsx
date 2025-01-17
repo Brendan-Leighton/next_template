@@ -1,17 +1,9 @@
 import type { Metadata, Viewport } from "next"
+import Script from 'next/script'
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-})
+import NavMenus from "@/components/nav-menu"
 
 export const metadata: Metadata = {
 	title: "Next.js Template",
@@ -34,13 +26,23 @@ export const viewport: Viewport = {
 	colorScheme: 'dark light',
 }
 
+const geistSans = Geist({
+	variable: "--font-geist-sans",
+	subsets: ["latin"],
+})
+
+const geistMono = Geist_Mono({
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
+})
+
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral transition-all duration-300 ease-in-out`}
 			>
@@ -50,9 +52,25 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
+					<NavMenus />
 					{children}
 				</ThemeProvider>
+
+				{/* Theme script - used instead of useEffect in ThemeProvider for Script's earlier execution which provides a plethera of benefits */}
+				<Script id="theme-script" strategy="beforeInteractive">
+					{`
+            (function () {
+              function getThemePreference() {
+                if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                  return localStorage.getItem('theme')
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+              }
+              document.documentElement.classList.add(getThemePreference())
+            })()
+          `}
+				</Script>
 			</body>
-		</html>
+		</html >
 	)
 }

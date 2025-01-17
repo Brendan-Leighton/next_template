@@ -1,4 +1,4 @@
-import { ContactIcons, ThemeToggler } from "@/components"
+import { ContactIcons } from "@/components"
 import { Button } from "@/components/shadcn/button"
 
 /**
@@ -41,6 +41,7 @@ export default function Home() {
 		<div className="flex flex-col justify-center items-center min-h-screen p-8 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 			<header>
 				<h1
+					id="top"
 					className='
 						text-6xl pb-4 text-foreground
 						max-w-[522px]
@@ -54,10 +55,9 @@ export default function Home() {
 					<a
 						href="https://github.com/Brendan-Leighton"
 						aria-label="Vercel"
-						className="block text-center min-[522px]:w-fit  min-[522px]:float-right"
+						className="block mx-auto min-[522px]:w-fit  min-[522px]:float-right"
 					>~ Brendan Leighton</a>
 				</Button>
-				<ThemeToggler />
 			</header>
 			<main
 				className="
@@ -67,8 +67,8 @@ export default function Home() {
 				"
 			>
 
-				<h2 className="text-3xl sm:text-4xl">Getting Started:</h2>
-				<em className="text-zinc-300">Refer to the README for detailed instructions.</em>
+				<h2 id="getting-started" className="text-3xl sm:text-4xl">Getting Started:</h2>
+				<em className="text-zinc-700 dark:text-zinc-300">Refer to the README for detailed instructions.</em>
 				<ol className="list-decimal list-inside flex flex-col gap-4 w-fit">
 					<li>Use Template on {GithubNextTemplateLink()}</li>
 					<li>Update dependencies</li>
