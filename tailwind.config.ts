@@ -32,6 +32,8 @@ export default {
 					foreground: 'var(--destructive-foreground)'
 				},
 				background: 'var(--background)',
+				background_z1: 'var(--background_z1)',
+				background_z2: 'var(--background_z2)',
 				foreground: 'var(--foreground)',
 				card: {
 					DEFAULT: 'var(--card)',

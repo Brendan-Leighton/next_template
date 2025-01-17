@@ -39,6 +39,8 @@ body {
 
 	:root {
 		--background: hsl(0 0% 100%);
+		--background_z1: hsl(0, 0%, 86%);
+		--background_z2: hsl(0, 0%, 67%);
 		--foreground: hsl(240 10% 3.9%);
 		--card: hsl(0 0% 100%);
 		--card-foreground: hsl(240 10% 3.9%);
@@ -67,6 +69,8 @@ body {
 
 	.dark {
 		--background: hsl(240 10% 3.9%);
+		--background_z1: hsl(240, 10%, 10%);
+		--background_z2: hsl(240, 10%, 14%);
 		--foreground: hsl(0 0% 98%);
 		--card: hsl(240 10% 3.9%);
 		--card-foreground: hsl(0 0% 98%);
