@@ -1,4 +1,4 @@
-import { Code, ContactIcons, ThemeToggler } from "@/components"
+import { ContactIcons, ThemeToggler } from "@/components"
 import { Button } from "@/components/shadcn/button"
 
 /**
@@ -38,7 +38,7 @@ export default function Home() {
 	}
 
 	return (
-		<div className="flex flex-col justify-center items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+		<div className="flex flex-col justify-center items-center min-h-screen p-8 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 			<header>
 				<h1
 					className='
@@ -64,25 +64,14 @@ export default function Home() {
 					flex flex-col gap-8 align-center
 					bg-background
 					rounded-md w-fit mx-auto
-					p-8
 				"
 			>
 
-				<h2 className="text-3xl">Get Started:</h2>
-
+				<h2 className="text-3xl sm:text-4xl">Getting Started:</h2>
+				<em className="text-zinc-300">Refer to the README for detailed instructions.</em>
 				<ol className="list-decimal list-inside flex flex-col gap-4 w-fit">
 					<li>Use Template on {GithubNextTemplateLink()}</li>
-					<li>
-						Update dependencies:
-						<ul className="list-circle pl-8 pt-2">
-							<li>
-								Latest Version <Code code="pnpm up --latest" />
-							</li>
-							<li>
-								Versions Defined in package.json <Code code="pnpm up" />
-							</li>
-						</ul>
-					</li>
+					<li>Update dependencies</li>
 					<li>Deploy on {VercelDeployLink()}</li>
 					<li>Modify docs or remove features</li>
 					<li>Begin Coding</li>

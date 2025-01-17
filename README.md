@@ -6,6 +6,7 @@
 [live_app]: https://next-template-bl.vercel.app/
 [git_workflow]: ./docs/GIT_WORKFLOW.md
 [use_template_button]: ./docs/assets/use-this-template-button.webp
+[git_page]: https://github.com/Brendan-Leighton/next_template
 
 <!-- 
 	PROJECT TITLE
@@ -32,28 +33,31 @@ Template project using Next.js. Initialized documentation and more to get up and
 
 ### Usage
 
-1. On GitHub, navigate to the main page of the repository.
+#### Getting Started
 
-2. Above the file list, click Use this template.
-![use_template_button]
-Screenshot of the "Use this template" button and the dropdown menu expanded to show the "Open in a codespace" option.
+1. Use the template:
+   
+	 a. Navigate to the [main page][git_page] of this repository.
+	 
+	 b. Click *Use this template* <img src="./docs/assets/use-this-template-button.webp" alt='Screenshot of the "Use this template" button and the dropdown menu expanded to show the "Open in a codespace" option.'/>
+   
+	 c. Select Create a new repository.
 
-3. Select Create a new repository.
-
+2. Update dependencies:
+     - Latest Version `pnpm up --latest`, or
+     - Versions Defined in package.json `pnpm up`
+3. Modify docs or remove unwanted features
+4. Deploy on [Vercel][varcel_deployment]
+5. Begin Coding
 
 ### Built With
 
 - [Next.js](https://nextjs.org/learn)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Color Generator](https://uicolors.app/create)
-
-<!-- Optional "Built With" technologies - uncomment or delete -->
-<!-- 
-- [React Typescript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
+- [Shadcn](https://ui.shadcn.com/) 
 - [Lucide Icons](https://lucide.dev/icons/)
 - [React Icons](https://react-icons.github.io/react-icons/)
-- [Shadcn Theming](https://ui.shadcn.com/docs/theming) 
--->
 
 ### Roadmap
 
