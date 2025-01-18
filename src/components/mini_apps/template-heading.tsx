@@ -15,11 +15,11 @@ export function TemplateHeading() {
 			<Button asChild
 				size='link'
 				variant='link'
+				className="flex mx-auto w-fit min-[522px]:float-right"
 			>
 				<a
 					href="https://github.com/Brendan-Leighton"
 					aria-label="Vercel"
-					className="block mx-auto min-[522px]:w-fit  min-[522px]:float-right"
 				>~ Brendan Leighton</a>
 			</Button>
 		</>

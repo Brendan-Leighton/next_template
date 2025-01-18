@@ -22,7 +22,7 @@ export function ThemeToggler() {
 		<Button
 			variant='ghost'
 			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-			className='hover:text-accent hover:bg-transparent'
+			className='hover:text-background hover:bg-accent rounded'
 		>
 			<Sun className='h-3xl w-3xl rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
 			<Moon className='absolute h-3xl w-3xl rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />

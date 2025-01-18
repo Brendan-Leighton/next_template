@@ -43,7 +43,7 @@ export default function NavMenus() {
 							href={href}
 							className='
 								min-h-11 m-w-11 py-2 px-4 rounded text-lg
-								hover:bg-accent
+								hover:bg-accent hover:text-background
 							'
 						>
 							{label}
@@ -55,7 +55,7 @@ export default function NavMenus() {
 						href={href}
 						className='
 								min-h-11 m-w-11 py-2 px-4 rounded text-lg
-								hover:bg-accent
+								hover:bg-accent hover:text-background
 							'
 					>
 						{label}
@@ -78,7 +78,7 @@ export default function NavMenus() {
 				))
 			}
 
-			<NavigationMenuItem className='hover:bg-primary-300 rounded'>
+			<NavigationMenuItem>
 				{
 					isMobile ?
 						<SheetClose asChild>
@@ -93,7 +93,7 @@ export default function NavMenus() {
 
 	return (
 		<NavigationMenu
-			className='h-auto border-b bg-background-50 shadow-md
+			className='fixed top-0 left-0 w-full h-12 border-b bg-background shadow-md
 				md:mx-auto
 			'
 			role='navigation'>
@@ -101,7 +101,7 @@ export default function NavMenus() {
 			{/* Mobile Menu */}
 			<Sheet>
 				<SheetTrigger asChild>
-					<Button className='ml-auto mr-4 md:hidden' variant="ghost" size="icon">
+					<Button className='ml-auto mr-4 md:hidden rounded' variant="ghost" size="icon" aria-label='Open Menu'>
 						<Menu className="h-[1.2rem] w-[1.2rem]" />
 					</Button>
 				</SheetTrigger>
