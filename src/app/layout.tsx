@@ -47,7 +47,7 @@ export default function RootLayout({
 				className={`
 					${geistSans.variable} ${geistMono.variable} 
 					antialiased transition-all duration-300 ease-in-out
-					pt-20 px-4 bg-background text-foreground
+					px-4 bg-background text-foreground
 				`}
 			>
 				<ThemeProvider

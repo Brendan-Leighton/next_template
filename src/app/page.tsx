@@ -7,7 +7,7 @@ import { ContactIcons, GettingStarted, TemplateHeading } from "@/components"
 export default function Home() {
 
 	return (
-		<div className="flex flex-col gap-16 items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
+		<div className="flex flex-col gap-16 justify-between items-center min-h-screen pt-24 font-[family-name:var(--font-geist-sans)]">
 			<header>
 				<TemplateHeading />
 			</header>
