@@ -43,12 +43,18 @@ Template project using Next.js. Initialized documentation and more to get up and
    
 	 c. Select Create a new repository.
 
-2. Update dependencies:
-     - Latest Version `pnpm up --latest`, or
-     - Versions Defined in package.json `pnpm up`
-3. Modify docs or remove unwanted features
-4. Deploy on [Vercel][varcel_deployment]
-5. Begin Coding
+	 d. Fill out new repo information
+
+0. Setup Project
+   1. Clone to your machine
+   2. Install Dependencies `pnpm i`
+
+   3. (optional) Update dependencies:
+        - Latest Version `pnpm up --latest`, or
+        - Versions Defined in package.json `pnpm up`
+0. (optional) Modify docs or remove unwanted features
+0. (optional) Deploy on [Vercel][varcel_deployment]
+0. Begin Coding
 
 ### Built With
 

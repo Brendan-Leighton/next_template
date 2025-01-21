@@ -39,7 +39,7 @@ export function GettingStarted() {
 			<em className="text-zinc-700 dark:text-zinc-300">Refer to the README for detailed instructions.</em>
 			<ol className="list-decimal list-inside flex flex-col gap-4 w-fit">
 				<li>Use Template on {GithubNextTemplateLink()}</li>
-				<li>Update dependencies</li>
+				<li>Setup Project</li>
 				<li>Deploy on {VercelDeployLink()}</li>
 				<li>Modify docs or remove features</li>
 				<li>Begin Coding</li>
