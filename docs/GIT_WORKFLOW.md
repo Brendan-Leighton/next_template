@@ -12,7 +12,7 @@ This project is using the Gitflow branching model as described by [Atlassian](ht
 
 ### Branches Overview
 
-- premanent branches
+- permanent branches
   - Main - production code
   - Develop - in development code
 - temporary branches
@@ -23,7 +23,7 @@ This project is using the Gitflow branching model as described by [Atlassian](ht
 ### Table
 
 > [!IMPORTANT] 
-> Multiple valuse in the *Merge To* column must all be merged into at the same time
+> Multiple values in the *Merge To* column must all be merged into at the same time
 
 | Branch Name | Checkout To      | Merge To      |
 | ----------- | ---------------- | ------------- |
@@ -53,8 +53,6 @@ git checkout develop_branch
 git merge feature_branch
 git branch -D feature_branch
 ```
-
-
 
 ### Diagram
 
