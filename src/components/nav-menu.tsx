@@ -1,126 +1,115 @@
-import React from 'react'
-import { Menu } from 'lucide-react'
+"use client"
+
+import Link from "next/link"
+import { Menu } from "lucide-react"
+
+import { Button } from "@/components/shadcn/button"
 import {
-	NavigationMenu,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	Button,
-	Sheet,
-	SheetContent,
-	SheetHeader,
-	SheetTitle,
-	SheetTrigger,
-	SheetClose
-} from './shadcn'
-import { ThemeToggler } from '@/components'
+    NavigationMenu,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+} from "@/components/shadcn/navigation-menu"
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/shadcn/sheet"
+import { ThemeToggler } from "./theme-toggler"
 
-export default function NavMenus() {
+type NavItem = {
+    href: string
+    label: string
+}
 
-	/**
-	 * Navigation links are rendered based on this navItems array.
-	 */
-	const navItems = [
-		{ href: '/#top', label: 'Logo' },
-		{ href: '/#getting-started', label: 'Getting Started' }
-	]
+type NavLinksProps = {
+    navItems: NavItem[]
+}
 
-	/**
-	 * Return a mobile or desktop link
-	 * @param props
-	 * @param props.href link
-	 * @param props.label text displayed
-	 * @param props.isMobile whether to render a mobile or desktop link
-	 * @returns a navigation link
-	 */
-	const NavLink = ({ href, label, isMobile }: { href: string, label: string, isMobile: boolean }) => (
-		<>
-			{
-				isMobile ?
-					<SheetClose asChild>
-						<NavigationMenuLink
-							key={label}
-							href={href}
-							className='
-								min-h-11 m-w-11 py-2 px-4 rounded text-lg
-								hover:bg-accent hover:text-background
-							'
-						>
-							{label}
-						</NavigationMenuLink>
-					</SheetClose>
-					:
-					<NavigationMenuLink
-						key={label}
-						href={href}
-						className='
-								min-h-11 m-w-11 py-2 px-4 rounded text-lg
-								hover:bg-accent hover:text-background
-							'
-					>
-						{label}
-					</NavigationMenuLink>
-			}
-		</>
-	)
+const navItems = [
+    { href: '/#top', label: 'Logo' },
+    { href: '/#getting-started', label: 'Getting Started' }
+]
 
-	/**
-	 * Navigation links are rendered based on the navItems array. Mobile and Desktop use this function.
-	 * @returns navigation links
-	 */
-	const NavLinks = ({ isMobile }: { isMobile: boolean }) => (
-		<>
-			{
-				navItems.map((item) => (
-					<NavigationMenuItem key={item.href}>
-						<NavLink href={item.href} label={item.label} isMobile={isMobile} />
-					</NavigationMenuItem>
-				))
-			}
+function MobileNavLinks({ navItems }: NavLinksProps) {
+    return (
+        <>
+            {navItems.map((item) => (
+                <li key={item.href} className="w-full">
+                    <Link
+                        href={item.href}
+                        className="block w-full rounded px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-background"
+                    >
+                        {item.label}
+                    </Link>
+                </li>
+            ))}
+            <li key="theme-toggler" className="w-full">
+                <ThemeToggler
+                    className="block w-full rounded px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-background"
+                />
+            </li>
+        </>
+    )
+}
 
-			<NavigationMenuItem>
-				{
-					isMobile ?
-						<SheetClose asChild>
-							<ThemeToggler />
-						</SheetClose>
-						:
-						<ThemeToggler />
-				}
-			</NavigationMenuItem>
-		</>
-	)
+function DesktopNavLinks({ navItems }: NavLinksProps) {
+    return (
+        <>
+            {navItems.map((item) => (
+                <NavigationMenuItem key={item.href}>
+                    <NavigationMenuLink asChild>
+                        <Link
+                            href={item.href}
+                            className="rounded px-3 py-2 text-md font-medium transition-colors hover:bg-accent hover:text-background"
+                        >
+                            {item.label}
+                        </Link>
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
+            ))}
+            <li key="theme-toggler" className="rounded px-3 py-2 text-md font-medium transition-colors hover:bg-accent hover:text-background">
+                <ThemeToggler />
+            </li>
+        </>
+    )
+}
 
-	return (
-		<NavigationMenu
-			className='fixed top-0 left-0 w-full h-12 border-b bg-background shadow-md
-				md:mx-auto
-			'
-			role='navigation'>
+export function NavMenus() {
+    return (
+        <NavigationMenu className="z-10 flex fixed top-0 left-0 w-full max-w-none border-b bg-background shadow-md">
+            {/* Mobile menu */}
+            <Sheet>
+                <SheetTrigger asChild>
+                    <Button
+                        className="ml-auto mr-4 rounded md:hidden"
+                        variant="ghost"
+                        size="icon"
+                        aria-label="Open navigation menu"
+                    >
+                        <Menu className="h-[1.2rem] w-[1.2rem]" />
+                    </Button>
+                </SheetTrigger>
 
-			{/* Mobile Menu */}
-			<Sheet>
-				<SheetTrigger asChild>
-					<Button className='ml-auto mr-4 md:hidden rounded' variant="ghost" size="icon" aria-label='Open Menu'>
-						<Menu className="h-[1.2rem] w-[1.2rem]" />
-					</Button>
-				</SheetTrigger>
+                <SheetContent side="left">
+                    <SheetHeader>
+                        <SheetTitle>Navigation Links</SheetTitle>
+                    </SheetHeader>
 
-				<SheetContent side="left">
-					<SheetHeader>
-						<SheetTitle>Navigation Links</SheetTitle>
-					</SheetHeader>
-					<NavigationMenuList className="mt-4 flex flex-col gap-2 items-start space-y-2">
-						<NavLinks isMobile={true} />
-					</NavigationMenuList>
-				</SheetContent>
-			</Sheet>
+                    <nav className="mt-4" aria-label="Mobile navigation">
+                        <ul className="flex flex-col items-start gap-2">
+                            <MobileNavLinks navItems={navItems} />
+                        </ul>
+                    </nav>
+                </SheetContent>
+            </Sheet>
 
-			{/* Desktop Menu */}
-			<NavigationMenuList className='hidden md:flex md:gap-4 h-auto'>
-				<NavLinks isMobile={false} />
-			</NavigationMenuList>
-
-		</NavigationMenu>
-	)
+            {/* Desktop menu */}
+            <NavigationMenuList className="hidden h-auto md:flex md:gap-4">
+                <DesktopNavLinks navItems={navItems} />
+            </NavigationMenuList>
+        </NavigationMenu>
+    )
 }

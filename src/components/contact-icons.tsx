@@ -26,7 +26,7 @@ export function ContactIcons({ className }: { className?: string }) {
         <ul
             className={`
 				${className}
-				 flex justify-center gap-4 w-fit
+				flex justify-center gap-4 w-fit
 			`}
         >
             {
@@ -42,6 +42,7 @@ export function ContactIcons({ className }: { className?: string }) {
                                 aria-label={title}
                                 className='text-3xl'
                                 title={title}
+                                target='_blank'
                             >
                                 {icon}
                             </a>

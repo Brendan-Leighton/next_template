@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Button } from '@/components/shadcn'
 
 export function GettingStarted() {
@@ -7,13 +7,13 @@ export function GettingStarted() {
         return (
             <Button asChild
                 variant="link"
-                size='icon'
+                size='link'
             >
                 <a
                     href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
                     aria-label="Vercel"
                     target="_blank"
-                >Vercel</a>
+                > Vercel</a>
             </Button>
         )
     }
@@ -22,7 +22,7 @@ export function GettingStarted() {
         return (
             <Button asChild
                 variant="link"
-                size='icon'
+                size='link'
             >
                 <a
                     href="https://github.com/Brendan-Leighton/next_template"
