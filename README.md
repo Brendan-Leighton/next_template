@@ -38,23 +38,19 @@ Template project using Next.js. Initialized documentation and more to get up and
 1. Use the template:
    
 	 a. Navigate to the [main page][git_page] of this repository.
-	 
-	 b. Click *Use this template* <img src="./docs/assets/use-this-template-button.webp" alt='Screenshot of the "Use this template" button and the dropdown menu expanded to show the "Open in a codespace" option.'/>
-   
-	 c. Select Create a new repository.
 
+	 b. Click *Use this template* <img src="./docs/assets/use-this-template-button.webp" alt='Screenshot of the "Use this template" button and the dropdown menu expanded to show the "Open in a codespace" option.'/>
+	 c. Select Create a new repository.
 	 d. Fill out new repo information
 
-0. Setup Project
+2. Setup Project
    1. Clone to your machine
    2. Install Dependencies `pnpm i`
-
-   3. (optional) Update dependencies:
-        - Latest Version `pnpm up --latest`, or
-        - Versions Defined in package.json `pnpm up`
-0. (optional) Modify docs or remove unwanted features
-0. (optional) Deploy on [Vercel][varcel_deployment]
-0. Begin Coding
+   3. (optional) Update dependencies to latest version `pnpm up --latest`
+3. (optional) Modify docs or remove unwanted features
+   - [src/app/components/next-template-components](/src/components/next-template-components/) may be deleted without harm to the project
+4. (optional) Deploy on [Vercel][varcel_deployment]
+5. Begin Coding
 
 ### Built With
 
