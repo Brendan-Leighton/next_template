@@ -46,7 +46,11 @@ function MobileNavLinks({ navItems }: NavLinksProps) {
                     </Link>
                 </li>
             ))}
-            <ThemeToggler />
+            <li key="theme-toggler" className="w-full">
+                <ThemeToggler
+                    className="block w-full rounded px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-background"
+                />
+            </li>
         </>
     )
 }
@@ -66,7 +70,9 @@ function DesktopNavLinks({ navItems }: NavLinksProps) {
                     </NavigationMenuLink>
                 </NavigationMenuItem>
             ))}
-            <ThemeToggler />
+            <li key="theme-toggler" className="rounded px-3 py-2 text-md font-medium transition-colors hover:bg-accent hover:text-background">
+                <ThemeToggler />
+            </li>
         </>
     )
 }
